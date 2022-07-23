@@ -1,0 +1,4 @@
+SASS
+- Synatatically Awesome StyleSheets
+Compass framework - to be used if you are working with sass on  non-anguuler projects
+- To future me - incase live sass compiler becomes deprecated remember to install Koala

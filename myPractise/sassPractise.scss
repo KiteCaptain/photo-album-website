@@ -1,0 +1,149 @@
+#outer-frame p {
+    color: #ccc;
+    width: 90%;
+    .danger-box {
+        background-color: #ff0000;
+        color: #fff;
+    }
+}
+
+// Varaiables
+$font-stack: Heletica, sana-serif;
+$primary-color: #333;
+body {
+    font: 100% $font-stack;
+    color: $primary-color
+}
+// Mathematical operations
+.main-container {
+    width: 100%;
+}
+article {
+    float: right;
+    width: 700px/960px * 100%;
+}
+
+// Imports
+@import 'base';
+p {
+    margin: 5px;
+    padding: 5px;
+    color: #0000cd;
+    background-color: #eee8aa;
+
+}
+//Extend 
+// @extend lets one share a set of CSS propertirs from one selector to another.
+/* 
+%common-status-styles {
+    width: 200px;
+    height: 75px;
+    padding: 10px;
+    color: #333; 
+}
+.active {
+    @extend %common-status-styles;
+    background-color: green;
+    border-color: #001a00;
+}
+.inactive {
+    @extend %common-status-styles;
+    background-color: yellow;
+    border-color: #ff0000;
+}
+.terminated {
+    @extend %common-status-styles;
+    background-color: pink;
+    border-color: #ff5a77;
+}
+*/
+
+// Mixins
+// Here is an example of styling a dropdown.
+// We have parameterize the width so that we can create different sizes of dropdowns
+// We use the @mixin directive
+@mixin custom-dropdown($dropdown-width) {
+    -webkit-appearance: button;
+    -webkit-border-radius: 2px;
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+    -webkit-padding-end: 20px;
+    -webkit-padding-start: 2px;
+    -webkit-user-select: none;
+    background-image: '####';
+    -webkit-linear-gradient: (#fafafa, #f4f4f4 40%, #e5e5e5 );
+    background-position: 97%;
+    background-repeat: no-repeat;
+    border: 1px solid #aaa;
+    font-size: 10pt;
+    margin: 0px;
+    overflow: hidden;
+    padding: 5px 12px 6px 6px;
+    white-space: nowrap;
+    width: $dropdown-width;
+}
+.small-dropdown {
+    @include custom-dropdown(75px);
+}
+.mediun-dropdown {
+    @include custom-dropdown(115px);
+}
+.large-dropdown {
+    @include custom-dropdown(155px);
+}
+
+// Placeholders
+%warning-placeholder {
+    color:red;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.warning {
+    @extend %warning-placeholder;
+}
+
+// Examples of built-in Functions
+// The code is revisited fro the Sass code from the extend section, written more flexibly using variables and built-in darken functio in order to have Sass do the math for us
+$active-color: green;
+$active-border-color: darken($active-color, 20%);
+$inactive-color: yellow;
+$inactive-border-color: darken($inactive-color, 20%);
+$terminated-color: pink;
+$terminated-border-color: daarken($terminated-color, 20%);
+
+%common-status-styles {
+    width: 200px;
+    height: 75px;
+    padding: 10px;
+    color: #333;
+}
+.active {
+    @extend %common-status-styles;
+    background-color: $active-color;
+    border-color: $active-border-color;
+}
+.inactive {
+    @extend %common-status-styles;
+    background-color: $inactive-color;
+    border-color: $inactive-border-color;
+}
+.terminated {
+    @extend %common-status-styles;
+    background-color: $inactive-color;
+    border-color: $inactive-border-color;
+}
+
+// My Custom Functions
+/*
+This custom function computes the width percentage given two parameters
+ie. -the number of columns for the target width
+    -the total number of columns there are
+*/
+@function column-width-percentage($cols, $total-cols) {
+    @return percentage($cols/$total-cols);
+}
+.col-1 {
+    width: column-width-percentage(4, 12);
+}
+.col-5 {
+    width: column-width-percentage(5, 12);
+}

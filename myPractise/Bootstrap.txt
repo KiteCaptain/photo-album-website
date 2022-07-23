@@ -1,0 +1,94 @@
+LISTING CAUROSEL
+Bootstrap has predefined classes that canbe used on row elements to align the column elements withi them. the following are some of the few
+- justify-content-center (centers the columns)
+- justify-content-start (left-justifies the columns)
+- justify-content-end (right-justifies the columns)
+- justify-around-end (spaces the columns evenly)
+- justify-between-end (puts all the available space between the two columns
+
+The following are some classes to use on the column elements in order to align contents  within them
+- align-self-start (will force that specific cell's content to the top of the cell)
+- align-self-end (will force that specific cell's content to the bottom of the cell)
+- align-self-center (will force that specific cell's content to the vertical center of the cell)
+--> The class name for the general column layout is <div class="clo-x"></div>
+
+---> In order to make the grid responsive, Bootstrap has included the ability for us to
+tweak the classes by adding a symbol to the class name between the col and the x (that is,an integer from 1 to 12).
+eg. <div class="col-xs-12 col-sm-4 col-md-3" >
+
+BOOTSTRAP COMPONENTS
+1. Button Components
+-Example is as shown below
+<button type="button" class="btn btn-primary">Click me</button>
+That button is blue in color, but there are other default colors we have access to via these
+other classes:
+-> btn-secondary: Light charcoal gray, with white font
+-> btn-success: Light green, with white font
+-> btn-danger: Red, with white font
+-> btn-warning: Goldenrod, with black font
+-> btn-info: Teal, with white font
+-> btn-light: Light gray, with black font 
+-> btn-dark: Almost black, with white font
+-> btn-link: turns a button into a link
+
+Bootstrap has a set ofclasses that match the preceding classes called Outline buttons. 
+The colors and class names are the same, with the only difference being the word outline between btn and secondary,success, danger, and so on. 
+The buttons are transparent except for the outline, or border, and
+of course, the font color for the text on the button.
+Here's what the classes look like
+-> btn-outline-secondary: Light charcoal gray outline, with the same color for the font
+-> btn-outline-success: Light green outline, with the same color for the font
+-> btn-outline-danger: Red outline, with the same color for the font
+-> btn-outline-warning: Goldenrod outline, with the same color for the font
+-> btn-outline-info: Teal outline, with the same color for the font
+-> btn-outline-light: Light gray outline, with the same color for the font
+-> btn-outline-dark: Almost black outline, with the same color for the font
+
+Bootstrap has a way in which to make the default button larger or
+smaller by adding the .btn-lg or .btn-sm class, respectively. Here is what that would look like:
+<button type="button" class="btn btn-primary btn-lg">I'm large</button>
+<button type="button" class="btn btn-primary btn-sm">I'm small</button>
+To get more on button: https://getbootstrap.com/docs/4.0/components/buttons/
+
+
+2. Alert Components
+For the most part, their coloring and naming scheme is fairly consistent with the button components.
+Here are the alerts that are available:
+--> <div class="alert alert-primary" role="alert">This is a primary alert</div>
+--> <div class="alert alert-secondary" role="alert">This is a secondary alert</div>
+--> <div class="alert alert-success" role="alert">This is a success alert</div>
+--> <div class="alert alert-danger" role="alert">This is a danger alert</div>
+--> <div class="alert alert-warning" role="alert">This is a warning alert</div>
+--> <div class="alert alert-info" role="alert">This is a info alert</div>
+--> <div class="alert alert-light" role="alert">This is a light alert</div>
+--> <div class="alert alert-dark" role="alert">This is a dark alert</div>
+
+Here is the link to Bootstrap's documentation on its alert components: https://getbootstrap.com/docs/4.0/components/alerts/
+
+
+3. Navbar Component
+Bootstrap's way to give you a nicely styled navigation bar across the top of your web page.
+These include the following:
+-> .navbar-brand for your company, product, or project name
+-> .navbar-nav for a full-height and lightweight navigation (including support for dropdowns)
+-> .navbar-toggler for use with our collapse plugin and other navigation toggling behaviors
+-> .form-inline for any form controls and actions
+-> .navbar-text for adding vertically centered strings of text
+-> .collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint
+
+More documentation on Bootstrap's Navs and Navbar components can be found:
+https://getbootstrap.com/docs/4.0/components/navs/ and https://getbootstrap.com/docs/4.0/components/navbar/
+
+
+4. Modal Components 
+Modal components are great ways to draw your user's attention to things by using them for
+creating lightboxes, user notifications, and more. 
+There are several demos on Bootstrap's modal component that you can check out
+here: https://getbootstrap.com/docs/4.0/components/modal/
+There are many other components that can be used, and you can find them on the official Bootstrap website here: https://getbootstrap.com/docs/4.0/components/
+
+
+NAV - section
+Implementing a nav tag element and using the Bootstrap navbar classes, navbar-default, navbar-fixed-top, navbar-brand, navbar-collapse, and so on. 
+These classes come with default functionality that covers almost all aspects of a navigation section. 
+One of the interesting things to note is the navbar-collapse class, which helps in rendering various device screen resolutions automatically.
